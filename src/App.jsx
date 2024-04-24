@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter,HashRouter } from "react-router-dom";
 import HomePage from './Pages/HomePage';
 import './index.css'
 import EventDescription from "./Pages/EventDescription";
@@ -8,13 +8,13 @@ function App() {
   return (
     <>
       <div className="w-screen max-w-screen  overflow-x-hidden">
-         <BrowserRouter>
+         <HashRouter>
          <Routes>
           <Route path='/' element={<HomePage/>}></Route>
           <Route path='/:event' element={<EventDescription/>}></Route>
           <Route path='/events' element={<Events/>}></Route>
          </Routes>
-         </BrowserRouter>
+         </HashRouter>
        </div>
     </>
   )
