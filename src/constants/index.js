@@ -1,12 +1,9 @@
 import { madads,skit,band,sing2,sing3,deca6,deca7,deca8,deca10 } from '../assets'
 
 export const navLinks = [
+ 
   {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "Events",
+    id: "events",
     title: "Events",
   },
   {

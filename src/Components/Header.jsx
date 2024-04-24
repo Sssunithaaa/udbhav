@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { styles } from "../../style";
 import { navLinks } from "../constants";
 import { menu, close,logo } from "../assets";
@@ -8,7 +8,7 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
     const location = useLocation();
-
+  const navigate = useNavigate();
   // Function to determine if the current location is the homepage
   const isHomepage = location.pathname === "/";
   return (
@@ -38,9 +38,9 @@ const Navbar = () => {
               className={`${
                 active !== nav.title ? "text-white" : "text-secondary"
               } text-[18px] font-semibold hover:text-white`}
-              onClick={() => setActive(nav.title)}
+              onClick={() => {setActive(nav.title); navigate(`${nav.id}`)}}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              {nav.title}
             </li>
           ))}
         </ul>
