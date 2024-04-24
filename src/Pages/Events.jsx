@@ -22,9 +22,9 @@ const Events = () => {
     console.log(selectedDay)
     const filteredEvents = selectedDay ? images.filter(event => event.day === selectedDay) : images;
   return (
-    <section className='w-full text-black mx-auto h-full mb-5 px-5 flex flex-col'>
+    <section className='w-full text-black mx-auto h-full mb-5  flex flex-col'>
      <Header/>  
-     <div>
+     <div className='px-5'>
 <div className='flex flex-row justify-between pt-10 lg:pl-16 pl-8 h-full'>
   <div className='flex justify-start'>
         <h1 className='text-[45px]  font-bold text-[#3f4161]'>Events</h1>
