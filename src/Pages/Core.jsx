@@ -10,9 +10,7 @@ const Core = () => {
       <div className='flex flex-row'>
         <div className="text-center mb-10 w-[50%] h-full my-auto px-5">
        
-        <p className="mt-2 text-lg">
-          Here we focus on markets where technology, innovation can unlock long-term value. You'll interact with talented professionals, be challenged to solve difficult problems and think in new and creative ways.
-        </p>
+        
         
       </div>
       <div className="w-[50%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
