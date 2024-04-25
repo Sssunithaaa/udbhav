@@ -34,7 +34,7 @@ navigate(`/${index}`, { state: { desc: event } })
         <Typography>
          <span className="font-semibold text-black">Venue:  {event.venue} </span> 
         </Typography>
-        <Typography className="font-semibold text-black mt-2">Prize Money:
+        <Typography><span className="font-semibold text-black">Prize Money:</span>
         <ul>
           {event.prizes.map((prize, index) => (
             <li key={index}>
