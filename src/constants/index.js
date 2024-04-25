@@ -202,7 +202,7 @@ export const miscellaneous = [
   contactPersons: [
     { name: "Aastha Singh", phone: "7675001245" }
   ],
-  registrationFee: "Rs.400/-",
+  registrationFee: "Rs.500/-",
   prizes: [
     { position: "First Prize", amount: "Rs.8000" },
     { position: "Second Prize", amount: "Rs.6000" }
