@@ -37,7 +37,7 @@ navigate(`/${index}`, { state: { desc: event } })
         <Typography><span className="font-semibold text-black">Prize Money:</span>
         <ul>
           {event.prizes.map((prize, index) => (
-            <li key={index}>
+            <li className="font-semibold text-black" key={index}>
               {prize.position}: <span className="text-pink-500">{prize.amount}</span>
             </li>
           ))}
