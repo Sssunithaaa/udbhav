@@ -34,6 +34,10 @@ export const dance = [
    contactPersons: [
     { "name": "Shoba Sharma", "phone": "7090911063" },
     { "name": "Aparna", "phone": "8001862622" }
+  ],
+   prizes: [
+    { position: "First Prize", amount: "Rs.10000" },
+    { position: "Second Prize", amount: "Rs.7000" }
   ]
 }
 
@@ -61,6 +65,10 @@ export const singing =  [
   contactPersons: [
     { "name": "Paras", "phone": "7975772360" },
     { "name": "Ajinkya", "phone": "8197476853" }
+  ],
+   prizes: [
+    { position: "First Prize", amount: "Rs.10000" },
+    { position: "Second Prize", amount: "Rs.7000" }
   ]
 }
 ,
@@ -86,6 +94,10 @@ export const singing =  [
       { "name": "Ananya", "phone": "7022937778" }
     ],
     registrationFee: "300/-",
+     prizes: [
+    { position: "First Prize", amount: "Rs.5000" },
+    { position: "Second Prize", amount: "Rs.3000" }
+  ]
 }
 ,
   {
@@ -105,16 +117,20 @@ export const singing =  [
     { name: "Tarunika", phone: "9448206826" },
     { name: "Jedi", phone: "8296020393" }
   ],
+   prizes: [
+    { position: "First Prize", amount: "Rs.5000" },
+    { position: "Second Prize", amount: "Rs.3000" }
+  ],
   registrationFee: "300/-"
 }
 
 ]
 export const theatre = [
   {
-  name: "Skit",
+  name: "Curtain call",
   image: skit,
   venue: "ESB 1",
-  type: "Curtain call",
+  type: "Skit",
   date: "29/04/2024",
   description: {
     0: "Time limit is 10+1 minutes (including set-up and clearance time)",

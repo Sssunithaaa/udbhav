@@ -34,16 +34,17 @@ navigate(`/${index}`, { state: { desc: event } })
         <Typography>
          <span className="font-semibold text-black">Venue:  {event.venue} </span> 
         </Typography>
-      {/* <Typography className="font-semibold text-black">Description:</Typography>
-        <ul className="list-disc list-inside">
-          {Object.values(event.description).map((desc, index) => (
-            <li key={index}>{desc}</li>
+        <Typography className="font-semibold text-black mt-2">Prize Money:
+        <ul>
+          {event.prizes.map((prize, index) => (
+            <li key={index}>
+              {prize.position}: <span className="text-pink-500">{prize.amount}</span>
+            </li>
           ))}
-        </ul> */}
+        </ul>
+        </Typography>
       </CardBody>
-      {/* <CardFooter className="pt-0">
-        <Button>Read More</Button>
-      </CardFooter> */}
+      
     </Card>
   );
 }
