@@ -2,14 +2,12 @@ import React,{useState} from 'react'
 import { Cardd } from './Card'
 import ArticleCardSkeleton from '../Components/ArticleCardSkeleton'
 import Header from '../Components/Header'
-import { images } from '../constants'
+
 import { singing } from '../constants'
 
 import { dance,fashion,literary,miscellaneous,theatre } from '../constants'
 const Events = () => {
-    const [isLoading, setIsLoading] = useState(false);
-    const [displayedCards, setDisplayedCards] = useState(2);
-    const [selectedDay, setSelectedDay] = useState(""); 
+   
     const [selectedCategory, setSelectedCategory] = useState(""); // State to hold selected event category
       const handleChangeCategory = (event) => {
         setSelectedCategory(event.target.value);
@@ -31,18 +29,27 @@ const Events = () => {
                 return [...dance, ...fashion, ...literary, ...miscellaneous, ...theatre];
         }
     };
-    const eventsToDisplay = selectedCategory ? filterEventsByCategory(selectedCategory) : [...dance, ...fashion, ...literary, ...miscellaneous, ...theatre];
-
+    let eventsToDisplay = selectedCategory ? filterEventsByCategory(selectedCategory) : [...dance, ...fashion, ...literary, ...miscellaneous, ...theatre];
+eventsToDisplay = eventsToDisplay.sort((a, b) => {
+    // Split the date strings by "/"
+    const [dayA, monthA, yearA] = a.date.split('/');
+    const [dayB, monthB, yearB] = b.date.split('/');
+    // Create new Date objects with parsed dates
+    const dateA = new Date(`${monthA}/${dayA}/${yearA}`);
+    const dateB = new Date(`${monthB}/${dayB}/${yearB}`);
+    // Compare the dates
+    return dateA - dateB;
+});
   return (
     <section className='w-full text-black mx-auto h-full mb-5  flex flex-col'>
      <Header/>  
      <div className='px-5'>
-<div className='flex flex-row justify-between pt-5 lg:pl-16 pl-8 h-full'>
+<div className='flex flex-row justify-between pt-5 lg:pl-16 pl-2 h-full'>
                     <div className='flex justify-start'>
                         <h1 className='text-[40px] font-bold text-[#3f4161]'>Events</h1>
                     </div>
-                    <div className='flex justify-end mr-5'>
-                        <select className="px-4 py-2 my-4 bg-gray-100 text-gray-900 rounded-md" value={selectedCategory} onChange={handleChangeCategory}>
+                    <div className='flex justify-end mr-3'>
+                        <select className="px-4 py-2 my-2 bg-gray-100 text-gray-900 rounded-md" value={selectedCategory} onChange={handleChangeCategory}>
                             <option value="">All Categories</option>
                             <option value="Dance">Dance</option>
                             <option value="Fashion">Fashion</option>

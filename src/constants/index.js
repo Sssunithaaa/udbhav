@@ -12,44 +12,12 @@ export const navLinks = [
   },
 ];
 
-export const  images = [{
-      image: deca6,
-      title: "Group dance eastern",
-      description:"",
-      day:1,
-      coordinators: "LASYA - PRAYAAG",
-      venue: "MAIN STAGE"
-    },
-    {
-      image: deca7,
-      title:"Group (Band)",
-      description:"",
-      day:1,
-      coordinators: "MAIN STAGE",
-      venue: ""
-    },
-    {
-      image: deca8,
-      title:"Street dance",
-      description:"",
-      day:2,
-      coordinators: "TNT-INFERNO",
-      venue: "BASKET BALL COURT"
-    },
-    
-{
-      image: deca10,
-      title:"Group dance western",
-      description:"",
-      day:1,
-      coordinators: "",
-      venue: "MAIN STAGE"
-    }
-  ];
+
 export const dance = [
   {
   name: "RAAS",
   type: "Eastern Event",
+  venue: "Main Stage",
   image: deca8,
   date: "30/04/2024",
   description: {
@@ -74,6 +42,7 @@ export const dance = [
 export const singing =  [
   {
   name: "VIVACE",
+  venue: "Main Stage",
   image:band,
   type: "Battle of Bands (BOTB)",
   date: "29/04/2024",
@@ -98,6 +67,7 @@ export const singing =  [
   {
   name: "SWARANJALI",
   image: sing2,
+  venue: "ESB 2",
   type: "Indian solo singing",
   date: "29/04/2024",
   description: {
@@ -121,6 +91,7 @@ export const singing =  [
   {
   name: "Symphonics",
   image: sing3,
+  venue: "ESB 2",
   type: "Western solo singing",
   date: "30/04/2024",
   description: {
@@ -142,6 +113,7 @@ export const theatre = [
   {
   name: "Skit",
   image: skit,
+  venue: "ESB 1",
   type: "Curtain call",
   date: "29/04/2024",
   description: {
@@ -166,6 +138,7 @@ export const theatre = [
 {
   name: "MAD ADS: ADSCAPE",
   image: madads, // Replace adImage with the appropriate image variable or path
+  venue: "LHC 2",
   type: "Theatre",
   date: "30/04/2024",
   description: {
@@ -195,6 +168,7 @@ export const miscellaneous = [
   {
   name: "Valorant",
   image: game,
+  venue: "ONLINE",
   type: "Gaming",
   date: "29/04/2024 & 30/04/2024",
   description: {
@@ -221,6 +195,7 @@ export const miscellaneous = [
 {
   name: "BGMI",
   image: game,
+  venue: "DES Hi Tech",
   type: "Gaming",
   date: "29/04/2024 & 30/04/2024",
   description: {
@@ -246,6 +221,7 @@ export const miscellaneous = [
 {
   name: "Through The Lens",
   image: photography,
+  venue: "ONLINE",
   type: "Photography",
   date: "29/04/2024 & 30/04/2024",
   description: {
@@ -272,6 +248,7 @@ export const miscellaneous = [
 {
   name: "Frame Fusion",
   image: videography,
+  venue: "ONLINE",
   type: "Videography",
   date: "29/04/2024 & 30/04/2024",
   description: {
@@ -303,6 +280,7 @@ export const fashion = [
   {
   name: "Cosplay Matsuri",
   image: cosplay,
+  venue: "ESB 1",
   type: "Fashion",
   date: "30/04/2024",
   description: {
@@ -334,6 +312,7 @@ export const literary = [
   {
   name: "General Quiz",
   image: quizzes,
+  venue: "DES Hi Tech",
   type: "Quiz",
   date: "29/04/2024",
   description: {
@@ -357,6 +336,7 @@ export const literary = [
 {
   name: "Criminal Inquest",
   image: crime, // Replace adImage with the appropriate image variable or path
+  venue: "LHC 1",
   type: "Quiz",
   date: "29/04/2024",
   description: {

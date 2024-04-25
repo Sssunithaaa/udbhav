@@ -31,6 +31,9 @@ navigate(`/${index}`, { state: { desc: event } })
         <Typography>
          <span className="font-semibold text-black">Registration Fee:  {event.registrationFee} </span> 
         </Typography>
+        <Typography>
+         <span className="font-semibold text-black">Venue:  {event.venue} </span> 
+        </Typography>
       {/* <Typography className="font-semibold text-black">Description:</Typography>
         <ul className="list-disc list-inside">
           {Object.values(event.description).map((desc, index) => (
