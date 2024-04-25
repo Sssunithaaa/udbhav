@@ -20,6 +20,7 @@ const EventDescription = () => {
           className="h-auto w-auto lg:w-screen lg:h-[550px] content-center mb-5"
           src={event?.image}
           alt="article"
+          style={{ objectFit: 'cover' }}
         />
         
         <h1 className="text-3xl font-bold mx-3 text-center text-[#3f4161] my-3">{event?.name}-<span className='text-pink-500'>{event?.type}</span></h1>
