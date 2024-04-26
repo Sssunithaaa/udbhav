@@ -6,7 +6,7 @@ import About from './About'
 
 const HomePage = () => {
   return (
-   <div className='relative z-0  bg-indigo-50 w-[100vw] max-w-screen overflow-x-hidden'>
+   <div className='relative z-0 w-[100vw] max-w-screen overflow-x-hidden'>
     
 
      <div class="absolute   -inset-x-1 inset-y-0 md:-inset-x-2 md:-inset-y-6">
