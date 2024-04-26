@@ -3,7 +3,7 @@ import { Cardd } from './Card'
 import ArticleCardSkeleton from '../Components/ArticleCardSkeleton'
 import Header from '../Components/Header'
 
-import { singing } from '../constants'
+import { fineArts, singing } from '../constants'
 
 import { dance,fashion,literary,miscellaneous,theatre } from '../constants'
 const Events = () => {
@@ -12,24 +12,24 @@ const Events = () => {
       const handleChangeCategory = (event) => {
         setSelectedCategory(event.target.value);
     };
-     const filterEventsByCategory = (category) => {
-        switch (category) {
-            case 'Dance':
-                return dance;
-            case 'Fashion':
-                return fashion;
-            case 'Literary':
-                return literary;
-            case 'Miscellaneous':
-                return miscellaneous;
-            case 'Theatre':
-                return theatre;
-            default:
-                // If no category is selected, return all events
-                return [...dance, ...fashion, ...literary, ...miscellaneous, ...theatre];
-        }
-    };
-    let eventsToDisplay = selectedCategory ? filterEventsByCategory(selectedCategory) : [...dance, ...fashion, ...literary, ...miscellaneous, ...theatre];
+    const filterEventsByCategory = (category) => {
+    switch (category) {
+        case 'Inter':
+            // Filter events by "Inter" scope
+            return [...dance, ...fashion, ...literary, ...miscellaneous, ...theatre].filter(event => event.scope === 'Inter');
+        case 'Intra':
+            // Filter events by "Intra" scope
+            return [...dance, ...fashion, ...literary, ...miscellaneous, ...theatre].filter(event => event.scope === 'Intra');
+        case 'Pure Intra':
+            // Filter events by "Pure Intra" scope
+            return [...dance, ...fashion, ...literary, ...miscellaneous, ...theatre].filter(event => event.scope === 'Pure Intra');
+        default:
+            // If no category is selected, return all events
+            return [...dance, ...fashion, ...literary,...singing, ...miscellaneous, ...theatre, ...fineArts];
+    }
+};
+
+    let eventsToDisplay = selectedCategory ? filterEventsByCategory(selectedCategory) : [...dance,...singing, ...fashion, ...literary, ...miscellaneous, ...theatre, ...fineArts];
 eventsToDisplay = eventsToDisplay.sort((a, b) => {
     // Split the date strings by "/"
     const [dayA, monthA, yearA] = a.date.split('/');
@@ -51,11 +51,10 @@ eventsToDisplay = eventsToDisplay.sort((a, b) => {
                     <div className='flex justify-end mr-3'>
                         <select className="px-4 py-2 my-2 bg-gray-100 text-gray-900 rounded-md" value={selectedCategory} onChange={handleChangeCategory}>
                             <option value="">All Categories</option>
-                            <option value="Dance">Dance</option>
-                            <option value="Fashion">Fashion</option>
-                            <option value="Literary">Literary</option>
-                            <option value="Miscellaneous">Miscellaneous</option>
-                            <option value="Theatre">Theatre</option>
+                            <option value="Intra">Intra</option>
+                            <option value="Inter">Inter</option>
+                            <option value="Pure Intra">Pure Intra</option>
+                            
                         </select>
                     </div>
                 </div>

@@ -4,7 +4,7 @@ import { msrit, video } from '../assets'
 
 const About = () => {
   return (
-    <section className='w-full flex flex-col mt-8 lg:py-5 lg:px-[120px] px-10 h-full text-black'>
+    <section className='w-full flex flex-col mt-8 lg:py-5 lg:px-[120px] px-6 h-full text-black'>
       <div className='mb-5 flex lg:flex-row flex-col w-full gap-x-10 gap-y-10 lg:py-20 justify-start items-start'>
         <div className=' lg:w-[50%] h-auto flex flex-col justify-start items-start'>
         <h1 className='text-[40px] mb-5 font-bold text-[#3f4161]'>About <span className='text-pink-500'>RIT</span></h1>

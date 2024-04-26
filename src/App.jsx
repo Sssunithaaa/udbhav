@@ -3,6 +3,8 @@ import HomePage from './Pages/HomePage';
 import './index.css'
 import EventDescription from "./Pages/EventDescription";
 import Events from "./Pages/Events";
+import AllEvents from "./Pages/Event2";
+// import AllEvents from "./Pages/Event2";
 function App() {
 
   return (
@@ -13,6 +15,9 @@ function App() {
           <Route path='/' element={<HomePage/>}></Route>
           <Route path='/:event' element={<EventDescription/>}></Route>
           <Route path='/events' element={<Events/>}></Route>
+                    <Route path='/contacts' element={<AllEvents/>}></Route>
+
+          {/* <Route path='/eventss' element={<AllEvents/>}></Route> */}
          </Routes>
          </HashRouter>
        </div>

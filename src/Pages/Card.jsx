@@ -29,14 +29,14 @@ navigate(`/${index}`, { state: { desc: event } })
          <span className="font-semibold text-black">Day: {event.date}</span>
         </Typography>
         <Typography>
-         <span className="font-semibold text-black">Registration Fee:  {event.registrationFee} </span> 
+         <span className="font-semibold text-black">Registration Fee:  {event.registrationFee !== null ? event.registrationFee : "None"} </span> 
         </Typography>
         <Typography>
          <span className="font-semibold text-black">Venue:  {event.venue} </span> 
         </Typography>
-        <Typography><span className="font-semibold text-black">Prize Money:</span>
+        <Typography><span className="font-semibold text-black">{event?.prizes && <span>Prize Money:</span>}</span>
         <ul>
-          {event.prizes.map((prize, index) => (
+          {event?.prizes?.map((prize, index) => (
             <li className="font-semibold text-black" key={index}>
               {prize.position}: <span className="text-pink-500">{prize.amount}</span>
             </li>

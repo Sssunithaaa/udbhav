@@ -17,25 +17,32 @@ const EventDescription = () => {
       <Header />
       <article className="flex flex-col items-center mx-auto w-full">
         <img
-          className="h-auto w-auto lg:w-screen lg:h-[550px] content-center mb-5"
+          className="h-auto lg:hidden w-auto lg:w-screen lg:h-[550px] content-center mb-5"
           src={event?.image}
           alt="article"
           style={{ objectFit: 'cover' }}
         />
+        <img
+          className="h-auto hidden lg:block w-[40%] mt-20 lg:h-auto content-center mb-5"
+          src={event?.image}
+          alt="article"
+          style={{ objectFit: 'cover' }}
+        />
+
         
         <h1 className="text-3xl font-bold mx-3 text-center text-[#3f4161] my-3">{event?.name}-<span className='text-pink-500'>{event?.type}</span></h1>
           <div className='w-full flex flex-col justify-center items-center px-10'>
             <p className="text-lg text-left font-medium"><span className='font-semibold text-[#3f4161]'>Date:</span> {event?.date}</p>
-            <p className="text-lg text-left font-medium"><span className='font-semibold text-[#3f4161]'>Registraion Fee:</span> {event?.registrationFee}</p>
+            <p className="text-lg text-left font-medium"><span className='font-semibold text-[#3f4161]'>Registraion Fee:</span> {event?.registrationFee !== null ? event?.registrationFee : "Free"}</p>
           </div>
-        <div className=" rounded-lg font-medium text-center px-10 py-3 mb-5">
+        {event?.description && Array.isArray(event.description) && event.description.length > 0 && <div className=" rounded-lg font-medium text-center px-10 py-3 mb-5">
           
           <ul>
             {Object.values(event?.description).map((desc, index) => (
               <li key={index}>{desc}</li>
             ))}
           </ul>
-        </div>
+        </div>}
         <div className='w-full text-center  mb-5'>
           <h2 className="text-lg text-[#3f4161] font-semibold mb-1">Contact Persons:</h2>
           <ul className='mb-2'>

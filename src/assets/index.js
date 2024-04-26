@@ -42,4 +42,8 @@ import quizzes from './quizzes.webp'
 import cosplay from './cosplay.jpg'
 import crime from './crime.jpg'
 import videography from './videography.webp'
-export {videography,quizzes,cosplay,crime,photography,game,face,dance,basketball,antipods,act,image,folkdance,jam,jugaadbandi,paint,penmagic,photo,poetry,poster,quiz,sculpt,msrit,heroo,madads,skit,menu,band,sing2,sing3,close,fest,festt,shirt,logo,collage,deca6,deca7,deca8,deca10,video,dummy1,dummy2,dummy3}
+import solodance from './10.png'
+import fashionn from './fashion.jpg'
+import groupdance from './groupdance.jpg'
+import rangoli from './rangoli.jpg'
+export {rangoli,groupdance,fashionn,solodance,act,videography,quizzes,cosplay,crime,photography,game,face,dance,basketball,antipods,image,folkdance,jam,jugaadbandi,paint,penmagic,photo,poetry,poster,quiz,sculpt,msrit,heroo,madads,skit,menu,band,sing2,sing3,close,fest,festt,shirt,logo,collage,deca6,deca7,deca8,deca10,video,dummy1,dummy2,dummy3}

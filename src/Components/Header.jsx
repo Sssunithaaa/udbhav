@@ -37,8 +37,8 @@ const Navbar = () => {
               key={nav.id}
               className={`${
                 active !== nav.title ? "text-white" : "text-secondary"
-              } text-[18px] font-semibold hover:text-white`}
-              onClick={() => {setActive(nav.title); navigate(`${nav.id}`)}}
+              } text-[18px] font-semibold hover:text-white hover:cursor-pointer `}
+              onClick={() => {setActive(nav.title); navigate(`/${nav.id}`)}}
             >
               {nav.title}
             </li>

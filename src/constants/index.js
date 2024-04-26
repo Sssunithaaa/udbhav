@@ -1,5 +1,6 @@
-import {game, madads,skit,band,sing2,sing3,deca6,deca7,deca8,deca10, photography, quiz, quizzes, crime, cosplay, videography } from '../assets'
-
+import {game, madads,skit,band,sing2,sing3,deca6,deca7,deca8,deca10, photography, quiz, quizzes, crime, cosplay, videography, solodance, groupdance, rangoli, face } from '../assets'
+import { act,poster,poetry,paint,penmagic } from '../assets';
+import { fashionn } from '../assets';
 export const navLinks = [
  
   {
@@ -7,7 +8,7 @@ export const navLinks = [
     title: "Events",
   },
   {
-    id: "contact",
+    id: "contacts",
     title: "Contact",
   },
 ];
@@ -18,6 +19,7 @@ export const dance = [
   name: "RAAS",
   type: "Eastern Event",
   venue: "Main Stage",
+  scope: "Inter",
   image: deca8,
   date: "30/04/2024",
   description: {
@@ -39,7 +41,50 @@ export const dance = [
     { position: "First Prize", amount: "Rs.10000" },
     { position: "Second Prize", amount: "Rs.7000" }
   ]
-}
+}, 
+  {
+    name: "Mystical Steps",
+    type: "Group Dance",
+    scope: "Inter",
+    image: groupdance,
+    description: {
+
+    },
+    date: "30/04/2024",
+    venue: "Mainstage",
+    
+    registrationFee: "Rs.1000/- per team",
+    contactPersons: [
+      { name: "Gautham", phone: "9008873532" },
+      { name: "Shraddha Rao", phone: "9880279549" }
+    ],
+    prizes: [
+    { position: "First Prize", amount: "Rs.10000" },
+    { position: "Second Prize", amount: "" }
+  ]
+    
+  },
+  {
+    name: "Dance-Off",
+    type: "Solo Dance",
+    scope: "Intra",
+    image: solodance,
+    date: "27/04/2024",
+    description: {
+
+    },
+    venue: "Basketball court",
+    contactPersons: [
+      { name: "Darshan", phone: "+91 99008 51962" },
+      { name: "Rohith", phone: "+91 99452 43801" }
+    ],
+    registrationFee: null,
+  //   prizes: [
+  //   { position: "", amount: "" },
+  //   { position: "", amount: "" }
+  // ]
+  },
+  
 
 ]
 
@@ -50,6 +95,7 @@ export const singing =  [
   image:band,
   type: "Battle of Bands (BOTB)",
   date: "29/04/2024",
+  scope: "Inter",
   timeLimit: "10+5 (may subject to change)",
   description: {
     0: "Backing tracks are not allowed",
@@ -78,6 +124,7 @@ export const singing =  [
   venue: "ESB 2",
   type: "Indian solo singing",
   date: "29/04/2024",
+   scope: "Inter",
   description: {
     0: "Any Indian genre (classical/filmy)",
     1: "Time duration:10 mins for classical 5 mins for filmy",
@@ -105,6 +152,7 @@ export const singing =  [
   image: sing3,
   venue: "ESB 2",
   type: "Western solo singing",
+  scope: "Inter",
   date: "30/04/2024",
   description: {
     0: "Time limit: 3 mins +30 seconds buffer",
@@ -130,6 +178,7 @@ export const theatre = [
   name: "Curtain call",
   image: skit,
   venue: "ESB 1",
+   scope: "Inter",
   type: "Skit",
   date: "29/04/2024",
   description: {
@@ -156,6 +205,7 @@ export const theatre = [
   image: madads, // Replace adImage with the appropriate image variable or path
   venue: "LHC 2",
   type: "Theatre",
+  scope: "Inter",
   date: "30/04/2024",
   description: {
     0: "Product must be of your own choice.",
@@ -176,7 +226,25 @@ export const theatre = [
     { position: "First Prize", amount: "Rs.5000" },
     { position: "Second Prize", amount: "Rs.3000" }
   ]
-}
+},
+{
+    name: "Actmania",
+    type: "Acting Arena",
+    scope: "Pure Intra",
+    date: "27/04/2024",
+      scope: "Pure Intra",
+    venue: "ESB 1",
+    description: {
+
+    },
+    contactPersons: [
+      { name: null, phone: null },
+      { name: null, phone: null }
+    ],
+    registrationFee: null,
+    
+    image: act
+  }
 
 ]
 
@@ -186,6 +254,7 @@ export const miscellaneous = [
   image: game,
   venue: "ONLINE",
   type: "Gaming",
+  scope: "Inter",
   date: "29/04/2024 & 30/04/2024",
   description: {
     0: "Participation is open to current student of the college.",
@@ -213,6 +282,7 @@ export const miscellaneous = [
   image: game,
   venue: "DES Hi Tech",
   type: "Gaming",
+  scope: "Inter",
   date: "29/04/2024 & 30/04/2024",
   description: {
     0: "Pre registration required.",
@@ -238,6 +308,7 @@ export const miscellaneous = [
   name: "Through The Lens",
   image: photography,
   venue: "ONLINE",
+   scope: "Inter",
   type: "Photography",
   date: "29/04/2024 & 30/04/2024",
   description: {
@@ -266,6 +337,7 @@ export const miscellaneous = [
   image: videography,
   venue: "ONLINE",
   type: "Videography",
+  scope: "Inter",
   date: "29/04/2024 & 30/04/2024",
   description: {
     0: "Theme will be provided 3 days prior to the event.",
@@ -298,6 +370,7 @@ export const fashion = [
   image: cosplay,
   venue: "ESB 1",
   type: "Fashion",
+    scope: "Inter",
   date: "30/04/2024",
   description: {
     0: "Coustumes from most, if not all, genres of fandom are accepted provided it abides the code of conduct of the event.",
@@ -321,8 +394,104 @@ export const fashion = [
     { position: "First Prize", amount: "Rs.6000" },
     { position: "Second Prize", amount: "Rs.4000" }
   ]
-}
+},
+{
+    name: "Fashion",
+    type: "Fashion Show",
+    scope: "Pure Intra",
+    image: fashionn,
+    date: "30/04/2024",
+    venue: "Mainstage",
+    description: {
+
+    },
+    contactPersons: [
+      { name: null, phone: null },
+      { name: null, phone: null }
+    ],
+    registrationFee: null,
+     
+  }
 ]
+
+export const fineArts = [
+  {
+    name: "Poster Palooza",
+    type: "Poster Making",
+    scope: "Intra",
+    date: "29th",
+    venue: "(Amphitheatre)",
+    description: {},
+    contactPersons: [
+      { name: "Harsha", phone: "9448725546" },
+     
+    ],
+    registrationFee: null,
+    
+    image: poster
+  },
+  {
+    name: "Pop-Up Picassos",
+    type: "Onspot Painting",
+    scope: "Intra",
+    date: "30th",
+    venue: "Classroom",
+    description: {},
+    contactPersons: [
+      { name: "Dhanyashree", phone: "6361602913" },
+      { name: "Chiranjeevi", phone: "9880683903" }
+    ],
+    registrationFee: null,
+   
+    image: paint
+  },
+  {
+    name: "Pen Magic",
+    type: "Cartooning",
+    scope: "Intra",
+    date: "30th",
+    venue: "(Amphitheatre)",
+    description: {},
+    contactPersons: [
+      { name: "Chiranjeevi", phone: "8722310427" },
+      { name: "Nagashri", phone: "7676301931" }
+    ],
+    registrationFee: null,
+   
+    image: penmagic
+  },
+  {
+    name: "Fine Art",
+    type: "Face Painting",
+    scope: "Intra",
+    date: "29th",
+    venue: null,
+    description: {},
+    contactPersons: [
+      { name: "Nagashri", phone: "767301931" },
+      { name: "Pragathi", phone: "7619311091" }
+    ],
+    registrationFee: null,
+    image: face
+  },
+  
+  {
+    name: "Rangrez Reverie",
+    type: "Rangoli",
+    scope: "Pure Intra",
+    image: rangoli,
+    date: "29th",
+    venue: "TBD",
+    description: {},
+    contactPersons: [
+      { name: null, phone: null },
+      { name: null, phone: null }
+    ],
+    registrationFee: null,
+    
+  }
+];
+
 
 export const literary = [
   {
@@ -330,6 +499,7 @@ export const literary = [
   image: quizzes,
   venue: "DES Hi Tech",
   type: "Quiz",
+  scope: "Inter",
   date: "29/04/2024",
   description: {
     0: "Teams of up to 3 members can be formed.",
@@ -353,6 +523,7 @@ export const literary = [
   name: "Criminal Inquest",
   image: crime, // Replace adImage with the appropriate image variable or path
   venue: "LHC 1",
+  scope: "Inter",
   type: "Quiz",
   date: "29/04/2024",
   description: {
