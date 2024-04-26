@@ -13,7 +13,7 @@ const EventDescription = () => {
   const event = state.desc;
 
   return (
-    <div className="relative z-0 w-full bg-indigo-50 max-w-screen overflow-x-hidden">
+    <div className="relative z-0 w-full min-h-screen bg-indigo-50 max-w-screen overflow-x-hidden">
       <Header />
       <article className="flex flex-col items-center mx-auto w-full">
         <img
@@ -35,14 +35,16 @@ const EventDescription = () => {
             <p className="text-lg text-left font-medium"><span className='font-semibold text-[#3f4161]'>Date:</span> {event?.date}</p>
             <p className="text-lg text-left font-medium"><span className='font-semibold text-[#3f4161]'>Registraion Fee:</span> {event?.registrationFee !== null ? event?.registrationFee : "Free"}</p>
           </div>
-        {event?.description && Array.isArray(event.description) && event.description.length > 0 && <div className=" rounded-lg font-medium text-center px-10 py-3 mb-5">
-          
-          <ul>
-            {Object.values(event?.description).map((desc, index) => (
-              <li key={index}>{desc}</li>
-            ))}
-          </ul>
-        </div>}
+        {event && event.description && Object.keys(event.description).length > 0 && (
+  <div className="rounded-lg font-medium text-center px-10 py-3 mb-5">
+    <ul>
+      {Object.values(event.description).map((desc, index) => (
+        <li key={index}>{desc}</li>
+      ))}
+    </ul>
+  </div>
+)}
+
         <div className='w-full text-center  mb-5'>
           <h2 className="text-lg text-[#3f4161] font-semibold mb-1">Contact Persons:</h2>
           <ul className='mb-2'>
