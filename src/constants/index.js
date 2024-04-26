@@ -450,7 +450,7 @@ export const fineArts = [
     type: "Cartooning",
     scope: "Intra",
     date: "30th",
-    venue: "(Amphitheatre)",
+    venue: "Amphitheatre",
     description: {},
     contactPersons: [
       { name: "Chiranjeevi", phone: "8722310427" },
@@ -472,6 +472,7 @@ export const fineArts = [
       { name: "Pragathi", phone: "7619311091" }
     ],
     registrationFee: null,
+    venue: "Amphitheatre",
     image: face
   },
   

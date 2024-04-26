@@ -16,13 +16,13 @@ const Events = () => {
     switch (category) {
         case 'Inter':
             // Filter events by "Inter" scope
-            return [...dance, ...fashion, ...literary, ...miscellaneous, ...theatre].filter(event => event.scope === 'Inter');
+            return [...dance, ...fashion, ...literary,...singing, ...miscellaneous, ...theatre, ...fineArts].filter(event => event.scope === 'Inter');
         case 'Intra':
             // Filter events by "Intra" scope
-            return [...dance, ...fashion, ...literary, ...miscellaneous, ...theatre].filter(event => event.scope === 'Intra');
+            return [...dance, ...fashion, ...literary,...singing, ...miscellaneous, ...theatre, ...fineArts].filter(event => event.scope === 'Intra');
         case 'Pure Intra':
             // Filter events by "Pure Intra" scope
-            return [...dance, ...fashion, ...literary, ...miscellaneous, ...theatre].filter(event => event.scope === 'Pure Intra');
+            return [...dance, ...fashion, ...literary,...singing, ...miscellaneous, ...theatre, ...fineArts].filter(event => event.scope === 'Pure Intra');
         default:
             // If no category is selected, return all events
             return [...dance, ...fashion, ...literary,...singing, ...miscellaneous, ...theatre, ...fineArts];
